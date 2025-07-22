@@ -13,7 +13,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
-
+import { useRoute } from '@react-navigation/native';
 // Екрани
 import HomeScreen from './screens/HomeScreen';
 import ProfileScreen from './screens/ProfileScreen';
@@ -25,6 +25,11 @@ import GuidesScreen from './screens/GuidesScreen';
 import LawsScreen from './screens/LawsScreen';
 import AccountScreen from './screens/AccountScreen';
 import ContactsScreen from './screens/ContactsScreen';
+import PneumaticScreen from './screens/PneumaticScreen';
+import KnifeScreen from './screens/KnifeScreen';
+import FlaubertScreen from './screens/FlaubertScreen';
+import TaserScreen from './screens/TaserScreen';
+import StickScreen from './screens/StickScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -88,7 +93,7 @@ function TabNavigator() {
         },
       })}
     >
-      <Tab.Screen
+      {/*2 <Tab.Screen
         name="Login"
         component={LoginScreen}
         options={{
@@ -101,7 +106,7 @@ function TabNavigator() {
         options={{
           tabBarStyle: { display: 'none' },
         }}
-      />
+      /> */}
       <Tab.Screen name="About" component={AboutScreen} />
       <Tab.Screen name="Weapons" component={WeaponsScreen} />
       <Tab.Screen name="Contacts" component={ContactsScreen} />
@@ -109,14 +114,16 @@ function TabNavigator() {
       <Tab.Screen name="Laws" component={LawsScreen} />
       <Tab.Screen name="Account" component={AccountScreen} />
       <Tab.Screen name="Home" component={HomeScreen} />
+
     </Tab.Navigator>
   );
 }
 
+
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName='LoginScreen' >
         <Stack.Screen name="TabNavigator" component={TabNavigator} options={{ headerShown: false }} />
         <Stack.Screen name="WeaponsScreen" component={WeaponsScreen} />
         <Stack.Screen name="AboutScreen" component={AboutScreen} />
@@ -124,6 +131,13 @@ function App() {
         <Stack.Screen name="LawsScreen" component={LawsScreen} />
         <Stack.Screen name="AccountScreen" component={AccountScreen} />
         <Stack.Screen name="ContactsScreen" component={ContactsScreen} />
+        <Stack.Screen name="PneumaticScreen" component={PneumaticScreen} />
+        <Stack.Screen name="KnifeScreen" component={KnifeScreen} />
+        <Stack.Screen name="FlaubertScreen" component={FlaubertScreen} />
+        <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="TaserScreen" component={TaserScreen} />
+        <Stack.Screen name="StickScreen" component={StickScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -136,7 +150,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   tabBar: {
-    height: 60,
+    flex: 1,
   },
   tabIcon: (focused) => ({
     width: 24,

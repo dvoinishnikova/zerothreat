@@ -1,6 +1,7 @@
-import { View, Text, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, SafeAreaView, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
 export default function HomeScreen({ route, navigation }) {
+  
   const { email } = route.params;  // Отримуємо email, переданий з LoginScreen
   
   // Обробник натискання кнопки
@@ -15,45 +16,84 @@ export default function HomeScreen({ route, navigation }) {
       {/* Кнопки для навігації на різні екрани */}
       <TouchableOpacity
         style={styles.button}
-        onPress={() => handlePress('AboutScreen')}  // Перехід на AboutScreen
+        onPress={() => handlePress('AboutScreen')}
       >
-        <Text style={styles.buttonText}>About</Text>
+        <View style={styles.buttonContent}>
+          <Text style={styles.buttonText}>About</Text>
+          <Image
+            source={require('../assets/about.png')}
+            style={styles.icon}
+          />
+        </View>
+
       </TouchableOpacity>
 
       <TouchableOpacity
         style={styles.button}
         onPress={() => handlePress('WeaponsScreen')}  // Перехід на WeaponsScreen
       >
-        <Text style={styles.buttonText}>Weapons</Text>
+        <View style={styles.buttonContent}>
+          <Text style={styles.buttonText}>Weapons</Text>
+          <Image
+            source={require('../assets/weapon-icon.png')}
+            style={styles.icon}
+          />
+        </View>
+
+
       </TouchableOpacity>
 
       <TouchableOpacity
         style={styles.button}
         onPress={() => handlePress('ContactsScreen')}  // Перехід на ContactsScreen
       >
-        <Text style={styles.buttonText}>Contacts</Text>
+        <View style={styles.buttonContent}>
+          <Text style={styles.buttonText}>Contacts</Text>
+          <Image
+            source={require('../assets/contacts.png')}
+            style={styles.icon}
+          />
+        </View>
       </TouchableOpacity>
 
       <TouchableOpacity
         style={styles.button}
         onPress={() => handlePress('GuidesScreen')}  // Перехід на GuidesScreen
       >
-        <Text style={styles.buttonText}>Guides</Text>
+        <View style={styles.buttonContent}>
+          <Text style={styles.buttonText}>Guides</Text>
+          <Image
+            source={require('../assets/guides.png')}
+            style={styles.icon}
+          />
+        </View>
       </TouchableOpacity>
 
       <TouchableOpacity
         style={styles.button}
         onPress={() => handlePress('LawsScreen')}  // Перехід на LawsScreen
       >
-        <Text style={styles.buttonText}>Laws</Text>
+        <View style={styles.buttonContent}>
+          <Text style={styles.buttonText}>Laws</Text>
+          <Image
+            source={require('../assets/laws.png')}
+            style={styles.icon}
+          />
+        </View>
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={styles.button}
-        onPress={() => handlePress('AccountScreen')}  // Перехід на AccountScreen
-      >
-        <Text style={styles.buttonText}>Account</Text>
-      </TouchableOpacity>
+  style={styles.button}
+  onPress={() => navigation.navigate('AccountScreen', { email })}
+>
+  <View style={styles.buttonContent}>
+    <Text style={styles.buttonText}>Account</Text>
+    <Image
+      source={require('../assets/account.png')}
+      style={styles.icon}
+    />
+  </View>
+</TouchableOpacity>
       
     </SafeAreaView>
   );
@@ -88,4 +128,16 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontFamily: 'StardosStencil-Regular',
   },
+  icon: {
+    width: 27,
+    height: 26,
+    
+
+  },
+  buttonContent: {
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'space-between', // або 'center' або 'flex-start', залежно від розташування
+  width: 130,
+},
 });

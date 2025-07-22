@@ -10,6 +10,7 @@ export default function AccountScreen() {
       <Text style={styles.title}>Account Info</Text>
       <Text style={styles.info}>Email: {email}</Text>
       <Text style={styles.info}>Name: {name}</Text>
+      {/* <Text style={styles.info}>Name: {name}</Text> */}
     </View>
   );
 }
