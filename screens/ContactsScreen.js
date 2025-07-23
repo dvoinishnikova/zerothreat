@@ -15,18 +15,3 @@ export default function ContactsScreen() {
    </SafeAreaView>
  );
 }
-
-const styles = StyleSheet.create({
- container: {
-   alignItems: 'center',
-   backgroundColor: '#F3DEBD',
-   height: '100%',
-justifyContent: 'center',
- },
- header: {
-   fontSize: 24,
-   fontWeight: 'bold',
- },
-});
-
-
