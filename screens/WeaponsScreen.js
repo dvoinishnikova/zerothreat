@@ -98,6 +98,64 @@ Sticks/climbing poles are a very good weapon for self-defense...          </Text
           </TouchableOpacity>
         </TouchableOpacity>
 
+        <TouchableOpacity style={styles.card}
+        onPress={() => handlePress('YawaraScreen')}>
+          <Image
+            source={require('../assets/yawara2.jpg')}
+            style={styles.image}
+          />
+          <Text style={styles.title}>Yawara</Text>
+          <Text style={styles.description}>
+The yawara is a small, handheld stick traditionally used in Japanese martial arts...          </Text>
+          <TouchableOpacity style={styles.arrow}>
+            <Ionicons name="arrow-forward-outline" size={22} color="black" />
+          </TouchableOpacity>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.card}
+        onPress={() => handlePress('PenScreen')}>
+          <Image
+            source={require('../assets/pen.jpg')}
+            style={styles.image}
+          />
+          <Text style={styles.title}>Tactical pen</Text>
+          <Text style={styles.description}>
+A tactical pen is a "concealed carry weapon": that is, it is not considered a weapon by law, but it can be used for self-defense
+          </Text>
+          <TouchableOpacity style={styles.arrow}>
+            <Ionicons name="arrow-forward-outline" size={22} color="black" />
+          </TouchableOpacity>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.card}
+        onPress={() => handlePress('PepperScreen')}>
+          <Image
+            source={require('../assets/pepper1.jpg')}
+            style={styles.image}
+          />
+          <Text style={styles.title}>Pepper</Text>
+          <Text style={styles.description}>
+A great option for all age groups. Very easy to use and does not require direct contact with the attacker.          </Text>
+          <TouchableOpacity style={styles.arrow}>
+            <Ionicons name="arrow-forward-outline" size={22} color="black" />
+          </TouchableOpacity>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.card}
+        onPress={() => handlePress('CastetScreen')}>
+          <Image
+            source={require('../assets/castet.jpg')}
+            style={styles.image}
+          />
+          <Text style={styles.title}>Brass knuckles</Text>
+          <Text style={styles.description}>
+They are made for everyday wear, but they are very dangerous          </Text>
+          <TouchableOpacity style={styles.arrow}>
+            <Ionicons name="arrow-forward-outline" size={22} color="black" />
+          </TouchableOpacity>
+        </TouchableOpacity>
+
+
       </ScrollView>
     </SafeAreaView>
   );

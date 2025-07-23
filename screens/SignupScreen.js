@@ -14,7 +14,7 @@ export default function LoginScreen() {
 
   const handlePress = () => {
     // Виконуємо перехід, передаючи дані
-    navigation.navigate("Home", { email: email, name: name, phoneNumber: phoneNumber, location: location });
+    navigation.navigate("HomeScreen", { email: email, name: name, phoneNumber: phoneNumber, location: location });
   };
 
   return (
@@ -74,7 +74,7 @@ export default function LoginScreen() {
       </TouchableOpacity>
 
       <Text style={styles.text}>Not new?</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+      <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
         <Text style={styles.linkText}>Log in</Text>
       </TouchableOpacity>
     </SafeAreaView>

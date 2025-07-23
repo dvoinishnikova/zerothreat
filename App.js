@@ -16,7 +16,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useRoute } from '@react-navigation/native';
 // Екрани
 import HomeScreen from './screens/HomeScreen';
-import ProfileScreen from './screens/ProfileScreen';
+//import ProfileScreen from './screens/ProfileScreen';
 import LoginScreen from './screens/LoginScreen';
 import SignupScreen from './screens/SignupScreen';
 import AboutScreen from './screens/AboutScreen';
@@ -30,6 +30,10 @@ import KnifeScreen from './screens/KnifeScreen';
 import FlaubertScreen from './screens/FlaubertScreen';
 import TaserScreen from './screens/TaserScreen';
 import StickScreen from './screens/StickScreen';
+import YawaraScreen from './screens/YawaraScreen';
+import PenScreen from './screens/PenScreen';
+import CastetScreen from './screens/CastetScreen';
+import PepperScreen from './screens/PepperScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -138,6 +142,11 @@ function App() {
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="TaserScreen" component={TaserScreen} />
         <Stack.Screen name="StickScreen" component={StickScreen} />
+        <Stack.Screen name="YawaraScreen" component={YawaraScreen} />
+        <Stack.Screen name="PenScreen" component={PenScreen} />
+        <Stack.Screen name="CastetScreen" component={CastetScreen} />
+        <Stack.Screen name="PepperScreen" component={PepperScreen} />
+        <Stack.Screen name="SignupScreen" component={SignupScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
