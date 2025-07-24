@@ -14,7 +14,7 @@ export default function GuidesScreen() {
     { id: 5, emoji: '🛒', title: 'Robbery While Shopping', screen: 'Guide5Screen' },
     { id: 6, emoji: '🌃', title: 'Nighttime Attack in Park or Alley', screen: 'Guide6Screen' },
     { id: 7, emoji: '🔪', title: 'Attacker with a Weapon', screen: 'Guide7Screen' },
-    { id: 8, emoji: '🔪', title: 'Behavior Under Occupation', screen: 'Guide8Screen' },
+    { id: 8, emoji: 'z💩', title: 'Behavior Under Occupation', screen: 'Guide8Screen' },
   ];
 
   return (

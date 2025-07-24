@@ -44,6 +44,14 @@ const weapons = [
     rating: 3,
   },
   {
+    screen: 'TraumaticScreen',
+    image: require('../assets/tram.jpg'),
+    title: 'Travmat',
+    description:
+      'Traumatic weapons (popularly known as travmat) are a good alternative for self-defense...',
+    rating: 4,
+  },
+  {
     screen: 'StickScreen',
     image: require('../assets/stick.jpg'),
     title: 'Stick',

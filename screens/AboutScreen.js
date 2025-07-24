@@ -20,13 +20,19 @@ export default function AboutScreen() {
         />
 
         <Text style={styles.text}>
-          Self-defense is something that is very underestimated in our society. The problem of attacks on people, for the purpose of robbery or simply the desire of the attacker to show superiority, remains widespread.
+          🛡️ <Text style={styles.bold}>Self-defense</Text> is something that is very underestimated in our society. The problem of attacks on people — for robbery or simply to show power — remains widespread.
           {"\n\n"}
-          Our team is focused on delivering clear and practical self-defense knowledge — so that you stay protected not only from attackers, but also from legal troubles that might follow.
+          👥 Our team is focused on delivering <Text style={styles.bold}>clear and practical self-defense knowledge</Text> — so that you stay protected not only from attackers, but also from <Text style={styles.bold}>legal troubles</Text> that might follow.
           {"\n\n"}
-          Many mistakenly believe that living in a safe area with strong police presence means self-defense is unnecessary. But one unexpected event can lead to devastating consequences. As the saying goes: “Better to have a weapon and not need it than to need it and not have it.”
+          ❗Many mistakenly believe that living in a safe area with strong police presence means <Text style={styles.bold}>self-defense is unnecessary</Text>. But one unexpected event can change everything. As the saying goes:{" "}
+          <Text style={styles.bold}>“Better to have a weapon and not need it than to need it and not have it.”</Text>
           {"\n\n"}
-          Another misconception: carrying a self-defense tool guarantees safety. In reality, real-life situations often leave no time for careful thinking. Our goal is to teach you how to stay calm under stress, react appropriately, and avoid conflict whenever possible — because the best fight is the one that never happens.
+          🚫 Another misconception: carrying a self-defense tool guarantees safety. In reality, real-life situations often leave no time for careful thinking.{" "}
+          <Text style={styles.bold}>Our goal is to teach you how to stay calm under stress</Text>, react appropriately, and <Text style={styles.bold}>avoid conflict whenever possible</Text> — because the best fight is the one that never happens.
+          {"\n\n"}
+          🧰 There are many means of self-defense — from a simple stick to a firearm. <Text style={styles.bold}>Everyday items</Text> can become effective tools in critical moments.
+          {"\n\n"}
+          🎒 Take a <Text style={styles.bold}>backpack</Text>, for instance. It’s completely ordinary — yet when used correctly, it can become a serious problem for the opponent. The same goes for a <Text style={styles.bold}>stick</Text>, which in capable hands is a strong tool against attack.
         </Text>
       </ScrollView>
     </SafeAreaView>
@@ -61,5 +67,9 @@ const styles = StyleSheet.create({
     color: '#1A1A1A',
     lineHeight: 24,
     textAlign: 'justify',
+  },
+  bold: {
+    fontWeight: 'bold',
+    color: '#0B2E10',
   },
 });

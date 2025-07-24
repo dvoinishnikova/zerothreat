@@ -8,7 +8,7 @@ export default function Guide8Screen() {
 
         <View style={styles.imageContainer}>
           <Image
-            source={require('../assets/weap.png')}
+            source={require('../assets/occ.png')}
             style={styles.image}
             resizeMode="cover"
           />

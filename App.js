@@ -1,4 +1,4 @@
-import * as React from 'react';
+//import * as React from 'react';
 import {
   StyleSheet,
   Text,
@@ -34,6 +34,8 @@ import YawaraScreen from './screens/YawaraScreen';
 import PenScreen from './screens/PenScreen';
 import CastetScreen from './screens/CastetScreen';
 import PepperScreen from './screens/PepperScreen';
+import EditScreen from './screens/EditScreen';
+import TraumaticScreen from './screens/TraumaticScreen';
 
 import Guide0Screen from './screens/Guide0Screen';
 import Guide1Screen from './screens/Guide1Screen';
@@ -50,6 +52,7 @@ const Tab = createBottomTabNavigator();
 
 function TabNavigator() {
   return (
+    
     <Tab.Navigator
       tabBarOptions={{
         labelStyle: styles.tabLabel,
@@ -157,6 +160,8 @@ function App() {
         <Stack.Screen name="CastetScreen" component={CastetScreen} />
         <Stack.Screen name="PepperScreen" component={PepperScreen} />
         <Stack.Screen name="SignupScreen" component={SignupScreen} />
+        <Stack.Screen name="EditScreen" component={EditScreen} />
+        <Stack.Screen name="TraumaticScreen" component={TraumaticScreen} />
 
         <Stack.Screen name="Guide0Screen" component={Guide0Screen} />
         <Stack.Screen name="Guide1Screen" component={Guide1Screen} />

@@ -1,101 +1,78 @@
-import { View, Text, SafeAreaView, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import React from 'react';
+import {
+  View,
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default function HomeScreen({ route, navigation }) {
-  
-  const { email } = route.params;  // Отримуємо email, переданий з LoginScreen
-  
-  // Обробник натискання кнопки
+  const { name } = route.params;
+
   const handlePress = (screen) => {
-    navigation.navigate(screen);  // Перехід на відповідний екран
+    navigation.navigate(screen);
   };
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.greeting}>Hello, {email}</Text>
+      <Text style={styles.greeting}>Hello, {name}</Text>
 
-      {/* Кнопки для навігації на різні екрани */}
-      <TouchableOpacity
-        style={styles.button}
+      <MenuButton
+        title="About"
+        iconName="information-circle-outline"
+        iconLib="Ionicons"
         onPress={() => handlePress('AboutScreen')}
-      >
-        <View style={styles.buttonContent}>
-          <Text style={styles.buttonText}>About</Text>
-          <Image
-            source={require('../assets/about.png')}
-            style={styles.icon}
-          />
-        </View>
-
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => handlePress('WeaponsScreen')}  // Перехід на WeaponsScreen
-      >
-        <View style={styles.buttonContent}>
-          <Text style={styles.buttonText}>Weapons</Text>
-          <Image
-            source={require('../assets/weapon-icon.png')}
-            style={styles.icon}
-          />
-        </View>
-
-
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => handlePress('ContactsScreen')}  // Перехід на ContactsScreen
-      >
-        <View style={styles.buttonContent}>
-          <Text style={styles.buttonText}>Contacts</Text>
-          <Image
-            source={require('../assets/contacts.png')}
-            style={styles.icon}
-          />
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => handlePress('GuidesScreen')}  // Перехід на GuidesScreen
-      >
-        <View style={styles.buttonContent}>
-          <Text style={styles.buttonText}>Guides</Text>
-          <Image
-            source={require('../assets/guides.png')}
-            style={styles.icon}
-          />
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => handlePress('LawsScreen')}  // Перехід на LawsScreen
-      >
-        <View style={styles.buttonContent}>
-          <Text style={styles.buttonText}>Laws</Text>
-          <Image
-            source={require('../assets/laws.png')}
-            style={styles.icon}
-          />
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-  style={styles.button}
-  onPress={() => navigation.navigate('AccountScreen', { email })}
->
-  <View style={styles.buttonContent}>
-    <Text style={styles.buttonText}>Account</Text>
-    <Image
-      source={require('../assets/account.png')}
-      style={styles.icon}
-    />
-  </View>
-</TouchableOpacity>
+      />
+      <MenuButton
+        title="Weapons"
+        iconName="pistol"
+        iconLib="MaterialCommunityIcons"
+        onPress={() => handlePress('WeaponsScreen')}
+      />
       
+      <MenuButton
+        title="Guides"
+        iconName="school-outline"
+        iconLib="Ionicons"
+        onPress={() => handlePress('GuidesScreen')}
+      />
+      <MenuButton
+        title="Laws"
+        iconName="document-text-outline"
+        iconLib="Ionicons"
+        onPress={() => handlePress('LawsScreen')}
+      />
+      <MenuButton
+        title="Contacts"
+        iconName="chatbubbles-outline"
+        iconLib="Ionicons"
+        onPress={() => handlePress('ContactsScreen')}
+      />
+      <MenuButton
+        title="Account"
+        iconName="person-outline"
+        iconLib="Ionicons"
+        //onPress={() => navigation.navigate('AccountScreen', { email })}
+        onPress={() => navigation.navigate('AccountScreen')}
+      />
     </SafeAreaView>
+  );
+}
+
+function MenuButton({ title, iconName, iconLib = 'Ionicons', onPress }) {
+  const IconComponent =
+    iconLib === 'MaterialCommunityIcons' ? MaterialCommunityIcons : Ionicons;
+
+  return (
+    <TouchableOpacity style={styles.button} onPress={onPress}>
+      <View style={styles.buttonContent}>
+        <Text style={styles.buttonText}>{title}</Text>
+        <IconComponent name={iconName} size={24} color="#003604" />
+      </View>
+    </TouchableOpacity>
   );
 }
 
@@ -104,45 +81,35 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     paddingHorizontal: 20,
-    //backgroundColor: '#F3DEBD',
     backgroundColor: '#C3F9C7',
-    
   },
   greeting: {
     fontSize: 18,
     fontWeight: 'bold',
     marginTop: 30,
     marginBottom: 60,
+    textAlign: 'center',
   },
   button: {
-    //backgroundColor: '#D9AA73',
     backgroundColor: '#72D978',
     borderWidth: 1,
-    padding: 15,
-    borderRadius: 20,
-    alignItems: 'center',
-    alignSelf: 'center',
-    //borderColor: '#6E4B23',
-
     borderColor: '#003604',
+    borderRadius: 20,
+    paddingVertical: 14,
+    paddingHorizontal: 20,
+    marginBottom: 18,
     width: 300,
-    marginBottom: 20, // Відступ між кнопками
+    alignSelf: 'center',
+  },
+  buttonContent: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   buttonText: {
     color: 'black',
     fontWeight: 'bold',
     fontFamily: 'StardosStencil-Regular',
+    fontSize: 16,
   },
-  icon: {
-    width: 27,
-    height: 26,
-    
-
-  },
-  buttonContent: {
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'space-between', // або 'center' або 'flex-start', залежно від розташування
-  width: 130,
-},
 });

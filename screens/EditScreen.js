@@ -3,7 +3,7 @@ import { Text, TextInput, SafeAreaView, StyleSheet, TouchableOpacity } from 'rea
 import { useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function SignupScreen() {
+export default function EditScreen() {
   const navigation = useNavigation();
 
   const [email, setEmail] = useState("");
@@ -41,13 +41,10 @@ export default function SignupScreen() {
       <TextInput value={location} onChangeText={setLocation} placeholder="Enter your location" style={styles.input} />
 
       <TouchableOpacity style={styles.button} onPress={handlePress}>
-        <Text style={styles.buttonText}>Sign up</Text>
+        <Text style={styles.buttonText}>Submit</Text>
       </TouchableOpacity>
 
-      <Text style={styles.text}>Not new?</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
-        <Text style={styles.linkText}>Log in</Text>
-      </TouchableOpacity>
+      
     </SafeAreaView>
   );
 }

@@ -30,9 +30,9 @@ export default function LawsScreen() {
         <Text style={styles.subtitle}>Additional Notes</Text>
 
         <View style={styles.card}>
-          <Text style={styles.cardTitle}>Provocation & Excessive Force</Text>
+          <Text style={styles.cardTitle}>Part 2 of Article 36 - Provocation & Excessive Force</Text>
           <Text style={styles.cardText}>
-            Part 2 of Article 36 of the Criminal Code of Ukraine emphasizes that a person must not deliberately provoke an attack or use excessive force. For example, if an attacker is provoking and closing distance, you cannot use lethal weapons. If necessary defence limits are exceeded, it is considered an offense.
+            Emphasizes that a person must not deliberately provoke an attack or use excessive force. For example, if an attacker is provoking and closing distance, you cannot use lethal weapons. If necessary defence limits are exceeded, it is considered an offense.
           </Text>
         </View>
 
