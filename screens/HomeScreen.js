@@ -104,7 +104,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     paddingHorizontal: 20,
-    backgroundColor: '#F3DEBD',
+    //backgroundColor: '#F3DEBD',
+    backgroundColor: '#C3F9C7',
+    
   },
   greeting: {
     fontSize: 18,
@@ -113,13 +115,16 @@ const styles = StyleSheet.create({
     marginBottom: 60,
   },
   button: {
-    backgroundColor: '#D9AA73',
-    borderWidth: 2,
+    //backgroundColor: '#D9AA73',
+    backgroundColor: '#72D978',
+    borderWidth: 1,
     padding: 15,
     borderRadius: 20,
     alignItems: 'center',
     alignSelf: 'center',
-    borderColor: '#6E4B23',
+    //borderColor: '#6E4B23',
+
+    borderColor: '#003604',
     width: 300,
     marginBottom: 20, // Відступ між кнопками
   },

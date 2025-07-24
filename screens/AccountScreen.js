@@ -31,7 +31,7 @@ export default function AccountScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F9FAFB',
+    backgroundColor: '#C3F9C7',
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingTop: 60,

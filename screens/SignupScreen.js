@@ -86,7 +86,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     paddingHorizontal: 20,
-    backgroundColor: '#F3DEBD',
+    //backgroundColor: '#F3DEBD',
+    backgroundColor: '#C3F9C7',
   },
   input: {
     borderWidth: 1,

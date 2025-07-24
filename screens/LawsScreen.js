@@ -67,7 +67,8 @@ export default function LawsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F0F4F8',
+    backgroundColor: '#C3F9C7',
+    //backgroundColor: '#F0F4F8',
   },
   scrollContainer: {
     padding: 20,

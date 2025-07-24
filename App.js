@@ -35,6 +35,16 @@ import PenScreen from './screens/PenScreen';
 import CastetScreen from './screens/CastetScreen';
 import PepperScreen from './screens/PepperScreen';
 
+import Guide0Screen from './screens/Guide0Screen';
+import Guide1Screen from './screens/Guide1Screen';
+import Guide2Screen from './screens/Guide2Screen';
+import Guide3Screen from './screens/Guide3Screen';
+import Guide4Screen from './screens/Guide4Screen';
+import Guide5Screen from './screens/Guide5Screen';
+import Guide6Screen from './screens/Guide6Screen';
+import Guide7Screen from './screens/Guide7Screen';
+import Guide8Screen from './screens/Guide8Screen';
+
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -147,6 +157,16 @@ function App() {
         <Stack.Screen name="CastetScreen" component={CastetScreen} />
         <Stack.Screen name="PepperScreen" component={PepperScreen} />
         <Stack.Screen name="SignupScreen" component={SignupScreen} />
+
+        <Stack.Screen name="Guide0Screen" component={Guide0Screen} />
+        <Stack.Screen name="Guide1Screen" component={Guide1Screen} />
+        <Stack.Screen name="Guide2Screen" component={Guide2Screen} />
+        <Stack.Screen name="Guide3Screen" component={Guide3Screen} />
+        <Stack.Screen name="Guide4Screen" component={Guide4Screen} />
+        <Stack.Screen name="Guide5Screen" component={Guide5Screen} />
+        <Stack.Screen name="Guide6Screen" component={Guide6Screen} />
+        <Stack.Screen name="Guide7Screen" component={Guide7Screen} />
+        <Stack.Screen name="Guide8Screen" component={Guide8Screen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

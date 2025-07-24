@@ -1,34 +1,36 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function GuidesScreen() {
+  const navigation = useNavigation();
+
   const guides = [
-    {
-      title: 'How to Stay Safe in Public',
-      content: 'Be aware of your surroundings. Avoid dark areas at night. Trust your instincts.',
-    },
-    {
-      title: 'Legal Self-Defense Tips',
-      content: 'Always act proportionally. Do not carry illegal weapons. Know your local laws.',
-    },
-    {
-      title: 'Emergency Situations',
-      content: 'Call the police immediately. Try to stay calm. Describe the situation clearly.',
-    },
+    { id: 0, emoji: '📘', title: 'Universal Guide', screen: 'Guide0Screen' },
+    { id: 1, emoji: '🏠', title: 'Burglars at Home', screen: 'Guide1Screen' },
+    { id: 2, emoji: '🚶', title: 'Street Attack', screen: 'Guide2Screen' },
+    { id: 3, emoji: '🚌', title: 'Attack in Public Transport', screen: 'Guide3Screen' },
+    { id: 4, emoji: '🏢', title: 'Threat in Stairwell or Elevator', screen: 'Guide4Screen' },
+    { id: 5, emoji: '🛒', title: 'Robbery While Shopping', screen: 'Guide5Screen' },
+    { id: 6, emoji: '🌃', title: 'Nighttime Attack in Park or Alley', screen: 'Guide6Screen' },
+    { id: 7, emoji: '🔪', title: 'Attacker with a Weapon', screen: 'Guide7Screen' },
+    { id: 8, emoji: '🔪', title: 'Behavior Under Occupation', screen: 'Guide8Screen' },
   ];
 
   return (
     <ScrollView contentContainerStyle={styles.scrollContainer}>
-      <View style={styles.container}>
-        <Text style={styles.header}>Safety Guides</Text>
-
-        {guides.map((guide, index) => (
-          <View key={index} style={styles.card}>
-            <Text style={styles.title}>{guide.title}</Text>
-            <Text style={styles.text}>{guide.content}</Text>
-          </View>
-        ))}
-      </View>
+      <Text style={styles.header}>🛡️ Safety Guides</Text>
+      {guides.map(guide => (
+        <TouchableOpacity
+          key={guide.id}
+          style={styles.card}
+          onPress={() => navigation.navigate(guide.screen)}
+        >
+          <Text style={styles.title}>
+            {guide.emoji} {guide.id}. {guide.title}
+          </Text>
+        </TouchableOpacity>
+      ))}
     </ScrollView>
   );
 }
@@ -36,19 +38,17 @@ export default function GuidesScreen() {
 const styles = StyleSheet.create({
   scrollContainer: {
     flexGrow: 1,
-    backgroundColor: '#F9FAFB',
+    backgroundColor: "#C3F9C7",
     paddingTop: 60,
     paddingHorizontal: 20,
     paddingBottom: 30,
-  },
-  container: {
-    alignItems: 'center',
   },
   header: {
     fontSize: 28,
     fontWeight: 'bold',
     color: '#1F2937',
     marginBottom: 30,
+    alignSelf: 'center',
   },
   card: {
     width: '100%',
@@ -63,13 +63,8 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   title: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '600',
     color: '#111827',
-    marginBottom: 10,
-  },
-  text: {
-    fontSize: 16,
-    color: '#4B5563',
   },
 });

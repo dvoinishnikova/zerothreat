@@ -1,51 +1,85 @@
-import { View, Text, SafeAreaView, StyleSheet, Image, ScrollView, TouchableOpacity, Alert, Switch, } from 'react-native';
-
+import React from 'react';
+import {
+  View,
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  Image,
+  ScrollView,
+} from 'react-native';
 
 export default function YawaraScreen() {
-    
-    
- return (
-   <SafeAreaView style={styles.container}>
-   <ScrollView>
-   <Image
-               source={require('../assets/yawara2.jpg')}
-               style={styles.img}
-             />
-   <Text style={styles.text}>
-      Yawara: a small, handheld stick traditionally used in Japanese martial arts. Typically 5–7 inches long, it is gripped in the fist with ends protruding on either side. It can be used to strike pressure points, apply joint locks, or enhance punches. Compact and easy to carry, the yawara is a practical tool for self-defense, offering increased control and force without causing permanent harm.But this is a rather mediocre option that is only good for those who already have a well-developed striking technique and serves to increase the force of the strike.
-     </Text>
+  return (
+    <SafeAreaView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.scroll}>
+        <Text style={styles.emojiTitle}>🥋 Yawara</Text>
+        <Text style={styles.subtitle}>Traditional Japanese self-defense tool</Text>
 
-   </ScrollView>
-     
-   </SafeAreaView>
- );
+        <Image
+          source={require('../assets/yawara2.jpg')}
+          style={styles.image}
+        />
+
+        <View style={styles.card}>
+          <Text style={styles.cardText}>
+            The <Text style={styles.bold}>yawara</Text> is a small handheld stick traditionally used in Japanese martial arts, typically 5–7 inches long.{"\n\n"}
+            It is held in the fist with ends protruding on both sides and can be used to <Text style={styles.bold}>strike pressure points</Text>, <Text style={styles.bold}>apply joint locks</Text>, or <Text style={styles.bold}>enhance punches</Text>.{"\n\n"}
+            Compact and easy to carry, the yawara offers <Text style={styles.bold}>increased control and force</Text> without causing permanent harm.{"\n\n"}
+            However, this is a <Text style={styles.bold}>mediocre option</Text> best suited for those who already have advanced striking skills, as it mainly amplifies the power of existing techniques.
+          </Text>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
- container: {
-   alignItems: 'center',
-   backgroundColor: '#F3DEBD',
-   height: '100%',
-   justifyContent: 'center',
-},
-text: {
-   fontSize: 21,
-   fontWeight: 'regular',
-   maxWidth: 370,
-    paddingHorizontal: 20,
- },
- img: {
-    width: 300,
-    height: 152,
-    // resizeMode: 'cover',
-    borderRadius: 4,
-    marginTop : 50,
-    marginBottom : 20 ,
-    alignSelf: 'center'
-    
-
+  container: {
+    flex: 1,
+    backgroundColor: '#E6FFF1',
   },
-
+  scroll: {
+    padding: 24,
+    alignItems: 'center',
+  },
+  emojiTitle: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#0B3D20',
+    textAlign: 'center',
+    marginTop: 20,
+  },
+  subtitle: {
+    fontSize: 16,
+    color: '#3A3A3A',
+    textAlign: 'center',
+    marginTop: 6,
+    marginBottom: 20,
+  },
+  image: {
+    width: '100%',
+    height: 170,
+    borderRadius: 16,
+    resizeMode: 'cover',
+    marginBottom: 24,
+  },
+  card: {
+    backgroundColor: '#ffffff',
+    borderRadius: 16,
+    padding: 20,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 12,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 5,
+  },
+  cardText: {
+    fontSize: 16,
+    lineHeight: 24,
+    color: '#333333',
+    textAlign: 'justify',
+  },
+  bold: {
+    fontWeight: 'bold',
+  },
 });
-
-

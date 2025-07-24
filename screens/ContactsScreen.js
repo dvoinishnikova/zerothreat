@@ -35,7 +35,7 @@ export default function ContactScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffffff',
+    backgroundColor: '#C3F9C7',
     paddingTop: 60,
     paddingHorizontal: 20,
     alignItems: 'center',

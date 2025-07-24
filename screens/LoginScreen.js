@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 20,
     // backgroundColor: '#F3DEBD',
-    backgroundColor: '#A9DDAD',
+    backgroundColor: '#C3F9C7',
   },
   input: {
     borderWidth: 1,
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     fontSize: 16,
     marginBottom: 20,
-    backgroundColor: '#E5CCAE',
+    backgroundColor: '#fff',
   },
   text: {
     fontSize: 18,
@@ -72,12 +72,14 @@ const styles = StyleSheet.create({
     fontFamily: "Stardos Stencil",
   },
   button: {
-    backgroundColor: '#D9AA73',
+
+    //backgroundColor: '#D9AA73',
+    backgroundColor: '#72D978',
     borderWidth: 1,
     padding: 15,
     borderRadius: 10,
     alignItems: 'center',
-    borderColor: 'black',
+    borderColor: '#003604',
   },
   buttonText: {
     color: 'black',

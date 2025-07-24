@@ -1,49 +1,85 @@
-import { View, Text, SafeAreaView, StyleSheet, Image, ScrollView, TouchableOpacity, Alert, Switch, } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import React from 'react';
+import {
+  View,
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  Image,
+  ScrollView,
+} from 'react-native';
 
 export default function StickScreen() {
-    const navigation = useNavigation();
- return (
-   <SafeAreaView style={styles.container}>
-   <ScrollView>
-   <Image
-               source={require('../assets/stick.jpg')}
-               style={styles.img}
-             />
-   <Text style={styles.text}>
-Sticks/climbing poles are a very good weapon for self-defense, especially for physically fit people. There are a large number of different sticks on sale that can be used both for everyday walking and for self-defense.</Text>
+  return (
+    <SafeAreaView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.scroll}>
+        <Text style={styles.emojiTitle}>🪵 Stick</Text>
+        <Text style={styles.subtitle}>A versatile self-defense tool</Text>
 
-   </ScrollView>
-     
-   </SafeAreaView>
- );
+        <Image
+          source={require('../assets/stick.jpg')}
+          style={styles.image}
+        />
+
+        <View style={styles.card}>
+          <Text style={styles.cardText}>
+            <Text style={styles.bold}>Sticks and climbing poles</Text> are excellent weapons for self-defense, especially if you are physically fit.{"\n\n"}
+            <Text style={styles.bold}>Many types of sticks</Text> are available on the market that serve well both as walking aids and effective defensive tools.{"\n\n"}
+            <Text style={styles.bold}>Advantages include:</Text> ease of use, long reach, and the ability to keep attackers at a distance.{"\n\n"}
+            Use responsibly and always remember to prioritize your safety first.
+          </Text>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
- container: {
-   alignItems: 'center',
-   backgroundColor: '#F3DEBD',
-   height: '100%',
-   justifyContent: 'center',
-},
-text: {
-   fontSize: 21,
-   fontWeight: 'regular',
-   maxWidth: 370,
-    paddingHorizontal: 20,
- },
- img: {
-    width: 300,
-    height: 152,
-    // resizeMode: 'cover',
-    borderRadius: 4,
-    marginTop : 50,
-    marginBottom : 20 ,
-    alignSelf: 'center'
-    
-
+  container: {
+    flex: 1,
+    backgroundColor: '#E6FFF1',
   },
-
+  scroll: {
+    padding: 24,
+    alignItems: 'center',
+  },
+  emojiTitle: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#0B3D20',
+    textAlign: 'center',
+    marginTop: 20,
+  },
+  subtitle: {
+    fontSize: 16,
+    color: '#3A3A3A',
+    textAlign: 'center',
+    marginTop: 6,
+    marginBottom: 20,
+  },
+  image: {
+    width: '100%',
+    height: 170,
+    borderRadius: 16,
+    resizeMode: 'cover',
+    marginBottom: 24,
+  },
+  card: {
+    backgroundColor: '#ffffff',
+    borderRadius: 16,
+    padding: 20,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 12,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 5,
+  },
+  cardText: {
+    fontSize: 16,
+    lineHeight: 24,
+    color: '#333333',
+    textAlign: 'justify',
+  },
+  bold: {
+    fontWeight: 'bold',
+  },
 });
-
-
