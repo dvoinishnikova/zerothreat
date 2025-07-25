@@ -33,6 +33,38 @@ export default function KnifeScreen() {
             ➤ Safer alternatives like pepper spray, sticks, or tactical pens can neutralize an attacker without risking a fatal outcome — or jail time.
           </Text>
         </View>
+
+        <Text style={styles.sectionTitle}>Types of Knives and Their Purpose</Text>
+
+        <View style={styles.knifeType}>
+          <Image
+            source={require('../assets/folding_knife.jpg')}
+            style={styles.typeImage}
+          />
+          <Text style={styles.typeText}>
+            🗂️ <Text style={{ fontWeight: 'bold' }}>Folding Knife</Text> — Compact and easy to carry, but not ideal for quick self-defense. Opening the blade takes time and may fail under pressure.
+          </Text>
+        </View>
+
+        <View style={styles.knifeType}>
+          <Image
+            source={require('../assets/fixed_blade.png')}
+            style={styles.typeImage}
+          />
+          <Text style={styles.typeText}>
+            🪓 <Text style={{ fontWeight: 'bold' }}>Fixed-Blade Knife</Text> — Strong and reliable. Often used for hunting or survival, but difficult to conceal and legally restricted in many areas.
+          </Text>
+        </View>
+
+        <View style={styles.knifeType}>
+          <Image
+            source={require('../assets/karambit.png')}
+            style={styles.typeImage}
+          />
+          <Text style={styles.typeText}>
+            🌀 <Text style={{ fontWeight: 'bold' }}>Karambit</Text> — Curved blade originally from Southeast Asia. Looks intimidating, but requires specialized training to use effectively and safely.
+          </Text>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -82,6 +114,40 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 24,
     color: '#333333',
+    textAlign: 'justify',
+  },
+  sectionTitle: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#0B3D20',
+    marginTop: 32,
+    marginBottom: 16,
+    textAlign: 'center',
+  },
+  knifeType: {
+    backgroundColor: '#F9F9F9',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 16,
+    width: '100%',
+    flexDirection: 'column',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.05,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 3,
+  },
+  typeImage: {
+    width: '100%',
+    height: 140,
+    borderRadius: 12,
+    resizeMode: 'cover',
+    marginBottom: 12,
+  },
+  typeText: {
+    fontSize: 15,
+    color: '#444',
     textAlign: 'justify',
   },
 });
