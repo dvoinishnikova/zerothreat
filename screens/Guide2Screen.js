@@ -8,7 +8,7 @@ export default function Guide2Screen() {
         
         <View style={styles.imageContainer}>
           <Image
-            source={require('../assets/street.png')} // заміни назву файлу за потреби
+            source={require('../assets/street.png')}
             style={styles.image}
             resizeMode="cover"
           />

@@ -26,7 +26,6 @@ export default function AccountScreen() {
 
   const handleLogout = async () => {
     try {
-      //await AsyncStorage.removeItem('@user_data');
       Alert.alert("Logged out", "You have been logged out successfully.");
       navigation.reset({
         index: 0,
@@ -39,7 +38,7 @@ export default function AccountScreen() {
   };
 
   const handleEdit = () => {
-    // Передаємо поточні дані на екран редагування (SignupScreen, наприклад)
+    
     navigation.navigate('EditScreen', { userData });
   };
 

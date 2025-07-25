@@ -16,7 +16,7 @@ export default function Guide0Screen() {
 
           <Text style={styles.bold}>4. Keep distance:</Text> Stay as far as possible from the attacker.{"\n\n"}
 
-          <Text style={styles.bold}>5. If you can escape — run:</Text> Do not hesitate if there’s nothing to protect. Ideally, spray a cloud of pepper behind you as you flee.{"\n\n"}
+          <Text style={styles.bold}>5. If you can escape — RUN:</Text> Do not hesitate if there’s nothing to protect. Ideally, spray a cloud of pepper behind you as you flee.{"\n\n"}
 
           <Text style={styles.bold}>6. If escape is impossible — attack aggressively:</Text> Use surprise, improvised weapons, and strike first.{"\n\n"}
 

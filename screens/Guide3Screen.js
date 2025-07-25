@@ -7,7 +7,7 @@ export default function Guide3Screen() {
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.imageContainer}>
           <Image
-            source={require('../assets/transport.png')} // заміни назву файлу за потреби
+            source={require('../assets/transport.png')}
             style={styles.image}
             resizeMode="cover"
           />

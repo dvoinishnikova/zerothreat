@@ -7,7 +7,7 @@ export default function Guide4Screen() {
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.imageContainer}>
           <Image
-            source={require('../assets/elevator.png')} // заміни на свою картинку
+            source={require('../assets/elevator.png')}
             style={styles.image}
             resizeMode="cover"
           />

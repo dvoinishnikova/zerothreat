@@ -59,27 +59,27 @@ const styles = StyleSheet.create({
   },
   scroll: {
     paddingHorizontal: 20,
-    paddingTop: 20,        // було 30
-    paddingBottom: 30,     // було 40
+    paddingTop: 20,
+    paddingBottom: 30,
   },
   input: {
     borderWidth: 1,
     borderColor: '#6E4B23',
-    paddingVertical: 10,   // було 12
+    paddingVertical: 10,
     paddingHorizontal: 10,
     borderRadius: 8,
-    fontSize: 15,          // було 16
-    marginBottom: 16,      // було 20
+    fontSize: 15,
+    marginBottom: 16,
     backgroundColor: '#fff',
   },
   text: {
-    fontSize: 17,          // було 18
-    marginBottom: 6,       // було 8
+    fontSize: 17,
+    marginBottom: 6,
   },
   button: {
     backgroundColor: '#72D978',
     borderWidth: 1,
-    paddingVertical: 11,   // було 15
+    paddingVertical: 11,
     paddingHorizontal: 15,
     borderRadius: 10,
     alignItems: 'center',

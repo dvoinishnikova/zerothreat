@@ -14,11 +14,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import { useRoute } from '@react-navigation/native';
-//import { ThemeProvider } from './screens/ThemeContext';
 
-// Екрани
+
+
 import HomeScreen from './screens/HomeScreen';
-//import ProfileScreen from './screens/ProfileScreen';
 import LoginScreen from './screens/LoginScreen';
 import SignupScreen from './screens/SignupScreen';
 import AboutScreen from './screens/AboutScreen';
@@ -112,20 +111,7 @@ function TabNavigator() {
         },
       })}
     >
-      {/*2 <Tab.Screen
-        name="Login"
-        component={LoginScreen}
-        options={{
-          tabBarStyle: { display: 'none' },
-        }}
-      />
-      <Tab.Screen
-        name="Signup"
-        component={SignupScreen}
-        options={{
-          tabBarStyle: { display: 'none' },
-        }}
-      /> */}
+      
       <Tab.Screen name="About" component={AboutScreen} />
       <Tab.Screen name="Weapons" component={WeaponsScreen} />
       <Tab.Screen name="Contacts" component={ContactsScreen} />

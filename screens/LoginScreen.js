@@ -2,11 +2,11 @@ import { useNavigation } from '@react-navigation/native';
 import { Text, TextInput, SafeAreaView, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { useState } from 'react';
 import React, { useContext } from 'react';
-//import ThemeContext from './ThemeContext';
+
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function LoginScreen() {
-  //const { theme, toggleTheme } = useContext(ThemeContext);
+
   const navigation = useNavigation();
 
   const [email, setEmail] = useState("");

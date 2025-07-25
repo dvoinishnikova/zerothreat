@@ -55,7 +55,7 @@ export default function HomeScreen({ route, navigation }) {
         title="Account"
         iconName="person-outline"
         iconLib="Ionicons"
-        //onPress={() => navigation.navigate('AccountScreen', { email })}
+        
         onPress={() => navigation.navigate('AccountScreen')}
       />
     </SafeAreaView>
