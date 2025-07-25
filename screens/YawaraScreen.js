@@ -7,8 +7,12 @@ import {
   Image,
   ScrollView,
 } from 'react-native';
+import { Linking, TouchableOpacity } from 'react-native';
 
 export default function YawaraScreen() {
+  const openLink = (url) => {
+        Linking.openURL(url).catch(err => console.error("Couldn't load page", err));
+      };
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scroll}>
@@ -28,6 +32,16 @@ export default function YawaraScreen() {
             However, this is a <Text style={styles.bold}>mediocre option</Text> best suited for those who already have advanced striking skills, as it mainly amplifies the power of existing techniques.
           </Text>
         </View>
+
+        <Text style={styles.sectionTitle}>More Information</Text>
+                                <View style={styles.moreInfoContainer}>
+                                  <TouchableOpacity onPress={() => openLink('https://uk.wikipedia.org/wiki/%D0%AF%D0%B2%D0%B0%D1%80%D0%B0')}>
+                                    <Text style={styles.linkText}>• Вікіпедія: Явара</Text>
+                                  </TouchableOpacity>
+                                  
+                                  
+                                  
+                                </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -81,5 +95,31 @@ const styles = StyleSheet.create({
   },
   bold: {
     fontWeight: 'bold',
+  },
+  sectionTitle: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#0B3D20',
+    marginTop: 32,
+    marginBottom: 16,
+    textAlign: 'center',
+  },
+  moreInfoContainer: {
+    width: '100%',
+    backgroundColor: '#ffffff',
+    borderRadius: 16,
+    padding: 20,
+    marginTop: 24,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 12,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 5,
+  },
+  linkText: {
+    fontSize: 16,
+    color: '#007AFF',
+    marginBottom: 12,
+    textDecorationLine: 'underline',
   },
 });

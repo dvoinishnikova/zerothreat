@@ -26,7 +26,7 @@ export default function ContactScreen() {
         </TouchableOpacity>
 
         <Text style={styles.label}>Address:</Text>
-        <Text style={styles.value}>23444v</Text>
+        <Text style={styles.value}>10 Zakhysnykiv Street, Apt. 5, Lviv, Lviv Oblast, 79000, Ukraine</Text>
       </View>
     </View>
   );

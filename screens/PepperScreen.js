@@ -7,8 +7,12 @@ import {
   Image,
   ScrollView,
 } from 'react-native';
+import { Linking, TouchableOpacity } from 'react-native';
 
 export default function PepperScreen() {
+  const openLink = (url) => {
+              Linking.openURL(url).catch(err => console.error("Couldn't load page", err));
+            };
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scroll}>
@@ -29,6 +33,22 @@ export default function PepperScreen() {
             A reliable choice for personal safety without escalating violence.
           </Text>
         </View>
+
+        <Text style={styles.sectionTitle}>More Information</Text>
+                                                        <View style={styles.moreInfoContainer}>
+                                                        <TouchableOpacity onPress={() => openLink('https://en.wikipedia.org/wiki/Pepper_spray')}>
+                                                            <Text style={styles.linkText}>• Wikipedia: Pepper spray</Text>
+                                                          </TouchableOpacity>
+        
+                                                          <TouchableOpacity onPress={() => openLink('https://uk.wikipedia.org/wiki/%D0%93%D0%B0%D0%B7%D0%BE%D0%B2%D0%B8%D0%B9_%D0%B1%D0%B0%D0%BB%D0%BE%D0%BD%D1%87%D0%B8%D0%BA')}>
+                                                            <Text style={styles.linkText}>• Вікіпедія: Газовий балончик</Text>
+                                                          </TouchableOpacity>
+                
+                                                          
+                                                          
+                                                          
+                                                          
+                                                        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -79,5 +99,31 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     color: '#333333',
     textAlign: 'justify',
+  },
+  sectionTitle: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#0B3D20',
+    marginTop: 32,
+    marginBottom: 16,
+    textAlign: 'center',
+  },
+  moreInfoContainer: {
+    width: '100%',
+    backgroundColor: '#ffffff',
+    borderRadius: 16,
+    padding: 20,
+    marginTop: 24,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 12,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 5,
+  },
+  linkText: {
+    fontSize: 16,
+    color: '#007AFF',
+    marginBottom: 12,
+    textDecorationLine: 'underline',
   },
 });

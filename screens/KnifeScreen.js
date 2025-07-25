@@ -7,8 +7,12 @@ import {
   Image,
   ScrollView,
 } from 'react-native';
+import { Linking, TouchableOpacity } from 'react-native';
 
 export default function KnifeScreen() {
+  const openLink = (url) => {
+      Linking.openURL(url).catch(err => console.error("Couldn't load page", err));
+    };
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scroll}>
@@ -65,6 +69,19 @@ export default function KnifeScreen() {
             🌀 <Text style={{ fontWeight: 'bold' }}>Karambit</Text> — Curved blade originally from Southeast Asia. Looks intimidating, but requires specialized training to use effectively and safely.
           </Text>
         </View>
+
+        <Text style={styles.sectionTitle}>More Information</Text>
+                <View style={styles.moreInfoContainer}>
+                  <TouchableOpacity onPress={() => openLink('https://en.wikipedia.org/wiki/Knife')}>
+                    <Text style={styles.linkText}>• Wikipedia: Knife</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity onPress={() => openLink('https://uk.wikipedia.org/wiki/%D0%9D%D1%96%D0%B6')}>
+                    <Text style={styles.linkText}>• Вікіпедія: Ніж</Text>
+                  </TouchableOpacity>
+                  
+                  
+                </View>
+
       </ScrollView>
     </SafeAreaView>
   );
@@ -149,5 +166,23 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: '#444',
     textAlign: 'justify',
+  },
+  moreInfoContainer: {
+    width: '100%',
+    backgroundColor: '#ffffff',
+    borderRadius: 16,
+    padding: 20,
+    marginTop: 24,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 12,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 5,
+  },
+  linkText: {
+    fontSize: 16,
+    color: '#007AFF',
+    marginBottom: 12,
+    textDecorationLine: 'underline',
   },
 });

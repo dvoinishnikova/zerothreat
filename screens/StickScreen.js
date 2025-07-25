@@ -7,8 +7,12 @@ import {
   Image,
   ScrollView,
 } from 'react-native';
+import { Linking, TouchableOpacity } from 'react-native';
 
 export default function StickScreen() {
+  const openLink = (url) => {
+          Linking.openURL(url).catch(err => console.error("Couldn't load page", err));
+        };
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scroll}>
@@ -16,7 +20,7 @@ export default function StickScreen() {
         <Text style={styles.subtitle}>A versatile self-defense tool</Text>
 
         <Image
-          source={require('../assets/stick.jpg')}
+          source={require('../assets/stick.png')}
           style={styles.image}
         />
 
@@ -28,6 +32,20 @@ export default function StickScreen() {
             Use responsibly and always remember to prioritize your safety first.
           </Text>
         </View>
+
+        <Text style={styles.sectionTitle}>More Information</Text>
+                                        <View style={styles.moreInfoContainer}>
+                                          <TouchableOpacity onPress={() => openLink('https://www.youtube.com/watch?v=yCyT3661onE')}>
+                                            <Text style={styles.linkText}>• YouTube: Master Combat Stick Basics for Quick Self-Defense</Text>
+                                          </TouchableOpacity>
+
+                                          <TouchableOpacity onPress={() => openLink('https://en.wikipedia.org/wiki/Stick-fighting')}>
+                                            <Text style={styles.linkText}>• Wikipedia: Stick-fighting</Text>
+                                          </TouchableOpacity>
+                                          
+                                          
+                                          
+                                        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -57,8 +75,8 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   image: {
-    width: '100%',
-    height: 170,
+    width: 300,
+    height: 300,
     borderRadius: 16,
     resizeMode: 'cover',
     marginBottom: 24,
@@ -81,5 +99,31 @@ const styles = StyleSheet.create({
   },
   bold: {
     fontWeight: 'bold',
+  },
+  sectionTitle: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#0B3D20',
+    marginTop: 32,
+    marginBottom: 16,
+    textAlign: 'center',
+  },
+  moreInfoContainer: {
+    width: '100%',
+    backgroundColor: '#ffffff',
+    borderRadius: 16,
+    padding: 20,
+    marginTop: 24,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 12,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 5,
+  },
+  linkText: {
+    fontSize: 16,
+    color: '#007AFF',
+    marginBottom: 12,
+    textDecorationLine: 'underline',
   },
 });

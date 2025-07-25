@@ -36,14 +36,6 @@ const weapons = [
     rating: 1,
   },
   {
-    screen: 'TaserScreen',
-    image: require('../assets/taser.jpg'),
-    title: 'Taser',
-    description:
-      'Tasers are a fairly mediocre means of self-defense that requires direct physical...',
-    rating: 3,
-  },
-  {
     screen: 'TraumaticScreen',
     image: require('../assets/tram.jpg'),
     title: 'Travmat',
@@ -52,8 +44,17 @@ const weapons = [
     rating: 4,
   },
   {
+    screen: 'TaserScreen',
+    image: require('../assets/taser.jpg'),
+    title: 'Taser',
+    description:
+      'Tasers are a fairly mediocre means of self-defense that requires direct physical...',
+    rating: 3,
+  },
+  
+  {
     screen: 'StickScreen',
-    image: require('../assets/stick.jpg'),
+    image: require('../assets/stick.png'),
     title: 'Stick',
     description:
       'Sticks/climbing poles are a very good weapon for self-defense...',

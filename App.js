@@ -14,6 +14,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import { useRoute } from '@react-navigation/native';
+//import { ThemeProvider } from './screens/ThemeContext';
+
 // Екрани
 import HomeScreen from './screens/HomeScreen';
 //import ProfileScreen from './screens/ProfileScreen';
@@ -139,6 +141,7 @@ function TabNavigator() {
 
 function App() {
   return (
+    
     <NavigationContainer>
       <Stack.Navigator initialRouteName='LoginScreen' >
         <Stack.Screen name="TabNavigator" component={TabNavigator} options={{ headerShown: false }} />
@@ -174,6 +177,8 @@ function App() {
         <Stack.Screen name="Guide8Screen" component={Guide8Screen} />
       </Stack.Navigator>
     </NavigationContainer>
+
+    
   );
 }
 

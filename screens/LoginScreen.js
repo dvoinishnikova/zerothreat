@@ -1,9 +1,12 @@
 import { useNavigation } from '@react-navigation/native';
 import { Text, TextInput, SafeAreaView, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { useState } from 'react';
+import React, { useContext } from 'react';
+//import ThemeContext from './ThemeContext';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function LoginScreen() {
+  //const { theme, toggleTheme } = useContext(ThemeContext);
   const navigation = useNavigation();
 
   const [email, setEmail] = useState("");
@@ -30,6 +33,8 @@ export default function LoginScreen() {
   };
 
   return (
+    
+      
     <SafeAreaView style={styles.container}>
       <Text style={styles.text}>Enter your email</Text>
       <TextInput value={email} onChangeText={setEmail} placeholder="Enter..." style={styles.input} keyboardType="email-address" autoCapitalize="none" />
@@ -41,11 +46,12 @@ export default function LoginScreen() {
         <Text style={styles.buttonText}>Log In</Text>
       </TouchableOpacity>
 
-      <Text style={styles.text}>New?</Text>
+      <Text style={styles.new}>New?</Text>
       <TouchableOpacity onPress={() => navigation.navigate('SignupScreen')}>
         <Text style={styles.linkText}> Sign up</Text>
       </TouchableOpacity>
     </SafeAreaView>
+
   );
 }
 
@@ -63,11 +69,16 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     fontSize: 16,
     marginBottom: 20,
+    justifyContent: 'center',
     backgroundColor: '#fff',
+    width: '90%',
+    alignSelf: 'center',
   },
   text: {
     fontSize: 18,
     marginBottom: 8,
+    width: '90%',
+    alignSelf: 'center',
   },
   button: {
     backgroundColor: '#72D978',
@@ -76,9 +87,26 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: 'center',
     borderColor: '#003604',
+    alignSelf: 'center',
+    width: '90%',
   },
   buttonText: {
     color: 'black',
     fontWeight: 'bold',
+  },
+  linkText: {
+    color: 'black',
+    textDecorationLine: 'underline',
+    marginTop: 5,
+    fontSize: 15,
+    width: '92%',
+    alignSelf: 'center',
+  },
+  new: {
+    marginTop: 10,
+    fontSize: 18,
+    marginBottom: 8,
+    width: '90%',
+    alignSelf: 'center',
   },
 });

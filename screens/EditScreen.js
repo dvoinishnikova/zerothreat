@@ -31,14 +31,17 @@ export default function EditScreen() {
       <Text style={styles.text}>Enter your email</Text>
       <TextInput value={email} onChangeText={setEmail} placeholder="Enter your email" style={styles.input} keyboardType="email-address" autoCapitalize="none" />
 
-      <Text style={styles.text}>Enter your password</Text>
-      <TextInput value={password} onChangeText={setPassword} placeholder="Enter your password" style={styles.input} secureTextEntry />
+      
 
       <Text style={styles.text}>Enter your phone number</Text>
       <TextInput value={phoneNumber} onChangeText={setPhoneNumber} placeholder="Enter your phone number" style={styles.input} keyboardType="phone-pad" />
 
       <Text style={styles.text}>Enter your location</Text>
       <TextInput value={location} onChangeText={setLocation} placeholder="Enter your location" style={styles.input} />
+
+      <Text style={styles.text}>Enter your password</Text>
+      <TextInput value={password} onChangeText={setPassword} placeholder="Enter your password" style={styles.input} secureTextEntry />
+
 
       <TouchableOpacity style={styles.button} onPress={handlePress}>
         <Text style={styles.buttonText}>Submit</Text>
@@ -52,33 +55,46 @@ export default function EditScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    paddingHorizontal: 20,
     backgroundColor: '#C3F9C7',
+  },
+  scroll: {
+    paddingHorizontal: 20,
+    paddingTop: 20,        // було 30
+    paddingBottom: 30,     // було 40
   },
   input: {
     borderWidth: 1,
     borderColor: '#6E4B23',
-    padding: 12,
+    paddingVertical: 10,   // було 12
+    paddingHorizontal: 10,
     borderRadius: 8,
-    fontSize: 16,
-    marginBottom: 20,
+    fontSize: 15,          // було 16
+    marginBottom: 16,      // було 20
     backgroundColor: '#fff',
   },
   text: {
-    fontSize: 18,
-    marginBottom: 8,
+    fontSize: 17,          // було 18
+    marginBottom: 6,       // було 8
   },
   button: {
     backgroundColor: '#72D978',
     borderWidth: 1,
-    padding: 15,
+    paddingVertical: 11,   // було 15
+    paddingHorizontal: 15,
     borderRadius: 10,
     alignItems: 'center',
     borderColor: 'black',
+    marginTop: 10,
   },
   buttonText: {
     color: 'black',
     fontWeight: 'bold',
+    fontSize: 16,
   },
+  linkText: {
+    color: 'blue',
+    textDecorationLine: 'underline',
+    marginTop: 5,
+    fontSize: 15,
+  }
 });
