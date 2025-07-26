@@ -38,9 +38,9 @@ const weapons = [
   {
     screen: 'TraumaticScreen',
     image: require('../assets/tram.jpg'),
-    title: 'Travmat',
+    title: 'Traumatic pistol',
     description:
-      'Traumatic weapons (popularly known as travmat) are a good alternative for self-defense...',
+      'Traumatic weapons are a good alternative for self-defense...',
     rating: 4,
   },
   {
@@ -82,7 +82,7 @@ const weapons = [
     title: 'Pepper',
     description:
       'A great option for all age groups. Very easy to use and does not require direct contact with the attacker.',
-    rating: 5,
+    rating: 4,
   },
   {
     screen: 'CastetScreen',

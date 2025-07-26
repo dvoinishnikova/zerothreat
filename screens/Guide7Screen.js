@@ -6,13 +6,13 @@ export default function Guide7Screen() {
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
 
-      <View style={styles.imageContainer}>
-                <Image
-                  source={require('../assets/weap.png')}
-                  style={styles.image}
-                  resizeMode="cover"
-                />
-              </View>
+        <View style={styles.imageContainer}>
+          <Image
+            source={require('../assets/weap.png')}
+            style={styles.image}
+            resizeMode="cover"
+          />
+        </View>
 
         <Text style={styles.title}>7. Attacker with a Weapon</Text>
         <Text style={styles.text}>
@@ -20,6 +20,9 @@ export default function Guide7Screen() {
           <Text style={styles.bold}>Do not approach.</Text> Step back, look for a barrier (fence, door, car).{"\n\n"}
           Loudly: <Text style={styles.bold}>“I’m armed!”</Text>{"\n\n"}
           Create a barrier if possible (chair, backpack, door).{"\n\n"}
+          <Text style={styles.bold}>
+            Grab any object you can use as a weapon as early as possible — a stick, a stone, or anything at hand. Without this, your chances are very limited.
+          </Text>{"\n\n"}
           If escape is impossible — <Text style={styles.bold}>attack first.</Text>{"\n\n"}
           Go for the weapon hand, face, throat.{"\n\n"}
           After — <Text style={styles.bold}>don’t touch the weapon.</Text> <Text style={styles.bold}>Back away.</Text>{"\n\n"}

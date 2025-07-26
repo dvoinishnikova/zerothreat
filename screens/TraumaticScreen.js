@@ -18,7 +18,7 @@ export default function TraumaticScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scroll}>
-        <Text style={styles.emojiTitle}>🛡️ Traumatic Weapons</Text>
+        <Text style={styles.emojiTitle}>🛡️ Traumatic pistol</Text>
         <Text style={styles.subtitle}>
           ⚙️ A good alternative for self-defense
         </Text>
@@ -27,7 +27,7 @@ export default function TraumaticScreen() {
 
         <View style={styles.card}>
           <Text style={styles.cardText}>
-            <Text style={styles.bold}>🔫 Traumatic weapons (travmat)</Text> are
+            <Text style={styles.bold}>🔫 Traumatic weapons</Text> are
             a good option for self-defense, provided you have the proper skills
             and self-control in dangerous situations.
             {"\n\n"}

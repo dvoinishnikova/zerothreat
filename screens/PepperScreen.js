@@ -24,18 +24,18 @@ export default function PepperScreen() {
         <Image source={require("../assets/pepper1.jpg")} style={styles.image} />
 
         <View style={styles.card}>
-          <Text style={styles.cardText}>
-            Pepper spray is a great self-defense option for all age groups.
-            {"\n\n"}
-            ✔️ Very easy to use and does not require direct contact with the
-            attacker.{"\n\n"}
-            ✔️ Causes temporary blindness and intense irritation, allowing you
-            time to escape.{"\n\n"}
-            ✔️ Compact and legal in many places, but always check local
-            regulations before carrying.{"\n\n"}A reliable choice for personal
-            safety without escalating violence.
-          </Text>
-        </View>
+  <Text style={styles.cardText}>
+    Pepper spray is a great self-defense option for all age groups.
+    {"\n\n"}
+    ✔️ Very easy to use and does not require direct contact with the attacker.{"\n\n"}
+    ✔️ Causes temporary blindness and intense irritation, allowing you time to escape.{"\n\n"}
+    ✔️ Compact and legal in many places, but always check local regulations before carrying.{"\n\n"}
+    ⚠️ <Text style={{ fontWeight: "bold" }}>Important:</Text> Using pepper spray in crowded places or enclosed areas is strictly prohibited, as it can harm bystanders and cause panic. This is a significant drawback you should consider.
+    {"\n\n"}
+    A reliable choice for personal safety without escalating violence.
+  </Text>
+</View>
+
 
         <Text style={styles.sectionTitle}>More Information</Text>
         <View style={styles.moreInfoContainer}>
